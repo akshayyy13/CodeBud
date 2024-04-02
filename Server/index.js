@@ -22,7 +22,7 @@ database.connect();
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:"https://codebud-frontend.vercel.app/",
+    origin:*,
     // Access-Control-Allow-Origin: *,
     credentials:true,
 
