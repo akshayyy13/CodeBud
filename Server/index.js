@@ -22,7 +22,7 @@ database.connect();
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:*,
+    origin:"http://localhost:3000",
     // Access-Control-Allow-Origin: *,
     credentials:true,
 
