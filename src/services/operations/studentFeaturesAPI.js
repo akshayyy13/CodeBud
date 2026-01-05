@@ -59,11 +59,11 @@ export async function buyCourse(
     if (!orderResponse.data.success) {
       throw new Error(orderResponse.data.message);
     }
-    // console.log("PRINTING orderResponse\n", orderResponse);
-    let x;
+    console.log("PRINTING orderResponse\n", orderResponse);
+
     //options
     const options = {
-      key: process.env.RAZORPAY_KEY,
+      key: orderResponse.data.key,
       currency: orderResponse.data.message.currency,
       amount: `${orderResponse.data.message.amount}`,
       order_id: orderResponse.data.message.id,
@@ -119,7 +119,7 @@ async function sendPaymentSuccessEmail(response, amount, token) {
 }
 
 async function verifyPayment(bodyData, token, navigate, dispatch) {
-  const toastId = toast.loading("Verifying Payment ->");
+
   dispatch(setPaymentLoading(true));
   try {
     // console.log("Verify Api check and bodyData -> ",bodyData)
