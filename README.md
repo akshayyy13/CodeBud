@@ -10,6 +10,20 @@
     ```sh
         npm install
     ```
+    Setup the .env file
+RESEND_API_KEY=
+JWT_SECRET=""
+FOLDER_NAME=""
+
+RAZORPAY_KEY=
+RAZORPAY_SECRET=
+
+CLOUD_NAME=""
+API_KEY=''
+API_SECRET=""
+
+MONGODB_URL=""
+
 
 1. Start the development server.
     ```sh
