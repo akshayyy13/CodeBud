@@ -1,17 +1,23 @@
-const { Resend } = require("resend");
+const SibApiV3Sdk = require("sib-api-v3-sdk");
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const client = SibApiV3Sdk.ApiClient.instance;
+client.authentications["api-key"].apiKey = process.env.BREVO_API_KEY;
 
 const mailSender = async (email, title, body) => {
   try {
-    await resend.emails.send({
-      from: "CodeBud <onboarding@resend.dev>",
-      to: email,
+    const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+
+    await apiInstance.sendTransacEmail({
+      sender: {
+        email: "aks333552@gmail.com", // verified sender
+        name: "CodeBud",
+      },
+      to: [{ email }],
       subject: title,
-      html: body,
+      htmlContent: body,
     });
   } catch (error) {
-    console.error("Email send failed:", error);
+    console.error("Email send failed:", error.response?.body || error);
     throw error;
   }
 };
