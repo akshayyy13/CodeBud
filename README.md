@@ -6,12 +6,12 @@
     gh repo clone akshayyy13/CodeBud
     ```
 
-1. Install the required packages.
+1. Install the required packages in Server/ and in Codebud/.
     ```sh
         npm install
     ```
-    Setup the .env file
-RESEND_API_KEY=
+Setup the .env file in Server/
+BREVO_API_KEY=
 JWT_SECRET=""
 FOLDER_NAME=""
 
@@ -23,6 +23,10 @@ API_KEY=''
 API_SECRET=""
 
 MONGODB_URL=""
+PORT=4000
+
+Setup the .env file in COdebud/
+REACT_APP_BASE_URL = "http://localhost:4000/api/v1"
 
 
 1. Start the development server.
