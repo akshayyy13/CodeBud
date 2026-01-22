@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable */
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import OTPInput from "react-otp-input";
 import { sendOtp, signUp } from "../services/operations/authAPI";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { GiBackwardTime } from "react-icons/gi";
 const VerifyEmail = () => {
-  const location = useLocation()
   const { loading, signUpData } = useSelector((state) => state.auth);
   const [otp, setOtp] = useState("");
   const dispatch = useDispatch();
@@ -32,8 +32,8 @@ const VerifyEmail = () => {
         password,
         confirmPassword,
         otp,
-        navigate
-      )
+        navigate,
+      ),
     );
   };
   return (

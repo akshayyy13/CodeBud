@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 import copy from "copy-to-clipboard";
 import { toast } from "react-hot-toast";
 import { BsFillCaretRightFill } from "react-icons/bs";
@@ -8,8 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 import { addToCart } from "../../../slices/cartSlice";
 import { ACCOUNT_TYPE } from "../../../utils/constants";
-
-
 
 function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
   const { user } = useSelector((state) => state.profile);
@@ -47,7 +45,7 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
     });
   };
 
-//   console.log("Student already enrolled ", course?.studentsEnrolled, user?._id)
+  //   console.log("Student already enrolled ", course?.studentsEnrolled, user?._id)
 
   return (
     <>

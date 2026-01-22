@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { apiConnector } from "../../../services/apiconnector";
@@ -20,7 +21,7 @@ const ContactUsForm = () => {
       const response = await apiConnector(
         "POST",
         contactusEndpoint.CONTACT_US_API,
-        data
+        data,
       );
       // const response = { status: "OK" };
       // console.log("Logging response", response);

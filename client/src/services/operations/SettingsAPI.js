@@ -70,7 +70,7 @@ export function updateProfile(token, formData) {
       //   )
         // console.log("Here")
         var demo=JSON.stringify(response.data.profileDetails);
-        // console.log("DEmo :", demo , demo.length)
+        console.log("Demo :", demo , demo.length)
         // console.log(" Local Storage :", localStorage.user , localStorage.user.length);
         // let x = localStorage.user;
         // console.log("x-->",typeof(x))

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable */
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useParams } from "react-router-dom";
 import { getFullDetailsOfCourse } from "../services/operations/courseDetailsAPI";

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect, useState } from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 // import { BiDotsVerticalRounded } from "react-icons/bi";
@@ -11,7 +12,7 @@ export default function EnrolledCourses() {
   const navigate = useNavigate();
 
   const [enrolledCourses, setEnrolledCourses] = useState(null);
-  
+
   useEffect(() => {
     const getEnrolledCourses = async () => {
       try {
@@ -64,7 +65,7 @@ export default function EnrolledCourses() {
                   //   `/view-course/${course?._id}/section/${course.courseContent?.[0]?._id}/sub-section/${course.courseContent?.[0]?.subSection?.[0]?._id}`
                   // );
                   navigate(
-                    `/view-course/${course?._id}/section/${course.courseContent?.[0]._id}/sub-section/${course.courseContent?.[0]?.subSection?.[0]?._id}`
+                    `/view-course/${course?._id}/section/${course.courseContent?.[0]._id}/sub-section/${course.courseContent?.[0]?.subSection?.[0]?._id}`,
                   );
                 }}
               >
