@@ -1,4 +1,4 @@
-import React from "react";
+
 import signupImg from "../assets/Images/signup.webp"; 
 import Template from "../components/core/Auth/Template";
 

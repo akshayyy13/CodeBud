@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect,  useState } from "react"
 import ReactStars from "react-rating-stars-component"
-import { Swiper, SwiperSlide } from "swiper/react"
+
 import { register } from "swiper/element/bundle";
 
 
@@ -26,19 +26,7 @@ function ReviewSlider() {
 
   // console.log(reviews)
 
-  const swiperElRef = useRef(null);
-
-  // useEffect(() => {
-  //   // listen for Swiper events using addEventListener
-  //   swiperElRef.current.addEventListener("swiperprogress", (e) => {
-  //     const [swiper, progress] = e.detail;
-  //     console.log(progress);
-  //   });
-
-  //   swiperElRef.current.addEventListener("swiperslidechange", (e) => {
-  //     console.log("slide changed");
-  //   });
-  // }, []);
+  
   return (
     <div className="text-white">
       <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">

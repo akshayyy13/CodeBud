@@ -1,4 +1,4 @@
-import React from "react";
+
 import { HiUsers } from "react-icons/hi2";
 import { BiNetworkChart } from "react-icons/bi";
 const CourseCard = ({ cardData, currentCard, setCurrentCard }) => {
